@@ -102,7 +102,7 @@ func Set(node interface{}, v interface{}, path ...interface{}) (interface{}, err
 }
 
 func SSet(node interface{}, v interface{}, path ...string) (interface{}, error) {
-	return Set(node, v, SPathToPath(path...))
+	return Set(node, v, SPathToPath(path...)...)
 }
 
 func Get(node interface{}, path ...interface{}) (interface{}, error) {
@@ -164,5 +164,5 @@ func Get(node interface{}, path ...interface{}) (interface{}, error) {
 }
 
 func SGet(node interface{}, path ...string) (interface{}, error) {
-	return Get(node, SPathToPath(path...))
+	return Get(node, SPathToPath(path...)...)
 }
