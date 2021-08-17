@@ -20,7 +20,7 @@ func SPathToPath(path ...string) []interface{} {
 		if err != nil {
 			iPath[i] = pathSegment
 		} else {
-			iPath[i] = numIdx
+			iPath[i] = int(numIdx)
 		}
 	}
 
